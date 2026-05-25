@@ -18,7 +18,8 @@ export default function Home() {
             I craft seamless digital experiences by bridging the gap between elegant frontend design and robust, scalable backend architecture.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+          <div className="flex flex-col items-center justify-center md:items-start md:justify-start gap-6">
+            {/* Download CV Button */}
             <a 
               href="/Athar.pdf" 
               download="Athar_Ali_CV.pdf"
@@ -27,12 +28,13 @@ export default function Home() {
                          text-sm md:text-base 
                          rounded-xl transition-all hover:scale-105 
                          shadow-[0_0_20px_rgba(6,182,212,0.3)] 
-                         w-fit mx-auto md:mx-0 text-center"
+                         w-fit text-center"
             >
               Download CV
             </a>
             
-            <div className="flex gap-6 text-2xl text-gray-400 pt-2 sm:pt-0">
+            {/* Socials - Properly placed with margin for spacing */}
+            <div className="flex gap-6 text-2xl text-gray-400 my-4 justify-center md:justify-start">
               <a href="https://github.com/atharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
                 <FaGithub />
               </a>
@@ -46,10 +48,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Side: Image with Ambient Glow */}
+        {/* Right Side: Image */}
         <div className="relative w-72 h-72 md:w-96 md:h-96 flex justify-center items-center">
           <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full opacity-50"></div>
-          
           <div className="relative w-64 h-64 md:w-80 md:h-80 bg-slate-900 rounded-full border-4 border-slate-800 overflow-hidden shadow-2xl">
             <img 
               src={atharImage} 
