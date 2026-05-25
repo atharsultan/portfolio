@@ -2,7 +2,7 @@ export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React.js", "Tailwind CSS", "JavaScript (ES6+)", "HTML5", "CSS3"]
+      skills: ["React.js", "Tailwind CSS", "JavaScript", "HTML5", "CSS3"]
     },
     {
       title: "Backend",
@@ -15,30 +15,39 @@ export default function Skills() {
   ];
 
   return (
-    <div className="bg-slate-950 min-h-screen text-white py-20 px-10">
+    <section className="bg-slate-950 min-h-screen py-20 px-6 text-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-center">
+        <h2 className="text-4xl font-extrabold mb-16 text-center">
           Technical <span className="text-cyan-400">Skills</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* The grid centers the last item by using md:grid-cols-2 for the first row, 
+            and ensuring the last item spans effectively. */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300">
-              <h3 className="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-700 pb-4">
+            <div 
+              key={index} 
+              // This logic centers the 3rd card by making it span the full width of the md grid
+              className={`${index === 2 ? "md:col-span-2 md:w-1/2 md:mx-auto" : ""} bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]`}
+            >
+              <h3 className="text-xl font-bold text-white mb-6 text-center">
                 {category.title}
               </h3>
-              <ul className="space-y-4">
+              
+              <div className="flex flex-wrap justify-center gap-3">
                 {category.skills.map((skill, i) => (
-                  <li key={i} className="flex items-center text-gray-300">
-                    <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                  <span 
+                    key={i} 
+                    className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all cursor-default"
+                  >
                     {skill}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
