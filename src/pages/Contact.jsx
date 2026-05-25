@@ -28,23 +28,17 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Socials */}
-            <div className="flex gap-4">
-              {[
-                { icon: <FaGithub />, link: "https://github.com/atharsultan" },
-                { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/iatharsultan" },
-                { icon: <FaInstagram />, link: "https://www.instagram.com/iatharsultan" }
-              ].map((social, i) => (
-                <a 
-                  key={i} 
-                  href={social.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-4 bg-slate-900 rounded-xl text-xl text-gray-400 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300"
-                >
-                  {social.icon}
-                </a>
-              ))}
+            {/* Socials - Correctly centered on mobile */}
+            <div className="flex justify-center md:justify-start gap-4">
+              <a href="https://github.com/atharsultan" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-xl text-xl text-gray-400 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/iatharsultan" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-xl text-xl text-gray-400 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300">
+                <FaLinkedin />
+              </a>
+              <a href="https://www.instagram.com/iatharsultan" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-xl text-xl text-gray-400 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300">
+                <FaInstagram />
+              </a>
             </div>
           </div>
 
