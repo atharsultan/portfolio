@@ -22,21 +22,32 @@ export default function Home() {
             <a 
               href="/Athar.pdf" 
               download="Athar_Ali_CV.pdf"
-              className="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-4 px-10 rounded-xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.3)] w-full sm:w-auto text-center"
+              className="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold 
+                         py-3 px-8 
+                         text-sm md:text-base 
+                         rounded-xl transition-all hover:scale-105 
+                         shadow-[0_0_20px_rgba(6,182,212,0.3)] 
+                         w-fit mx-auto md:mx-0 text-center"
             >
               Download CV
             </a>
+            
             <div className="flex gap-6 text-2xl text-gray-400 pt-2 sm:pt-0">
-              <a href="https://github.com/atharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><FaGithub /></a>
-              <a href="https://www.linkedin.com/in/iatharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><FaLinkedin /></a>
-              <a href="https://www.instagram.com/iatharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors"><FaInstagram /></a>
+              <a href="https://github.com/atharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/iatharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+                <FaLinkedin />
+              </a>
+              <a href="https://www.instagram.com/iatharsultan" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </div>
 
         {/* Right Side: Image with Ambient Glow */}
         <div className="relative w-72 h-72 md:w-96 md:h-96 flex justify-center items-center">
-          {/* Ambient Glow background */}
           <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full opacity-50"></div>
           
           <div className="relative w-64 h-64 md:w-80 md:h-80 bg-slate-900 rounded-full border-4 border-slate-800 overflow-hidden shadow-2xl">

@@ -28,7 +28,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Socials - Correctly centered on mobile */}
             <div className="flex justify-center md:justify-start gap-4">
               <a href="https://github.com/atharsultan" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-xl text-xl text-gray-400 hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300">
                 <FaGithub />
@@ -49,7 +48,14 @@ export default function Contact() {
               <input type="email" placeholder="Your Email" className="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-cyan-500 outline-none transition-all text-white placeholder-gray-500" />
               <textarea placeholder="Your Message" rows="4" className="w-full bg-slate-950 border border-slate-800 p-4 rounded-xl focus:border-cyan-500 outline-none transition-all text-white placeholder-gray-500"></textarea>
             </div>
-            <button className="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/20 active:scale-95">
+            
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold 
+                               py-3 px-8 
+                               text-sm md:text-base 
+                               rounded-xl transition-all shadow-lg shadow-cyan-500/20 
+                               active:scale-95 
+                               w-fit mx-auto block"
+            >
               Send Message
             </button>
           </form>
