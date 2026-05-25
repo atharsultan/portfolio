@@ -1,5 +1,5 @@
-import bbdmsImage from "../assets/BBDS.png";
-import smogImage from "../assets/SMOG.png"; 
+import bbdmsImage from "../assets/BBDS.PNG";
+import smogImage from "../assets/SMOG.PNG"; 
 
 export default function Projects() {
   const projects = [
